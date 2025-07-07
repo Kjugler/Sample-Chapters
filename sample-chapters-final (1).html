@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Agnes Protocol | Sample Chapters</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #00ff00;
+      font-family: 'Courier New', Courier, monospace;
+      margin: 0;
+      padding: 40px;
+    }
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 40px;
+    }
+    .video-container {
+      flex: 1;
+      max-width: 400px;
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .content {
+      flex: 1;
+      max-width: 400px;
+    }
+    h1 {
+      font-size: 1.8em;
+      margin-bottom: 10px;
+    }
+    .chapter-links a, .button-row button {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 12px;
+      border: 2px solid #00ff00;
+      background-color: #111;
+      color: #00ff00;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .chapter-links a:hover, .button-row button:hover {
+      background-color: #00ff00;
+      color: #000;
+    }
+    .button-row {
+      margin-top: 30px;
+    }
+    .tappsy {
+      margin-top: 20px;
+      font-style: italic;
+      color: #00ff00;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="video-container">
+      <iframe id="endorsementVideo" src="https://www.youtube.com/embed/qj9H74Qy4HM?autoplay=1&mute=1&controls=0&rel=0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+    <div class="content">
+      <h1>Sample Chapters from <em>The Agnes Protocol</em></h1>
+      <div class="chapter-links">
+        <a href="Sample_chpt1.pdf" target="_blank">Read Chapter 1</a>
+        <a href="Sampel_chpt2.pdf" target="_blank">Read Chapter 2</a>
+        <a href="Sample4_chpt9.pdf" target="_blank">Read Chapter 9</a>
+        <a href="Sample3_chpt45.pdf" target="_blank">Read Chapter 45</a>
+      </div>
+      <div class="button-row">
+        <button onclick="location.href='https://theagnesprotocol.com'">Buy the Book</button>
+        <button onclick="history.back()">Return to Contest</button>
+      </div>
+      <div class="tappsy">Tappsy says: “Let’s make it official…”</div>
+    </div>
+  </div>
+
+  <script>
+    const videos = [
+      "https://www.youtube.com/embed/qj9H74Qy4HM?autoplay=1&mute=1&controls=0&rel=0",
+      "https://www.youtube.com/embed/Rp1C4kokLdE?autoplay=1&mute=1&controls=0&rel=0"
+    ];
+    let current = 0;
+    setInterval(() => {
+      current = (current + 1) % videos.length;
+      document.getElementById("endorsementVideo").src = videos[current];
+    }, 20000);
+  </script>
+</body>
+</html>
